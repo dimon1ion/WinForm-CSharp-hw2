@@ -564,14 +564,14 @@ namespace WinForm_CSharp_hw2
             // englishToolStripMenuItem
             // 
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.englishToolStripMenuItem.Text = "English";
             this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
             // 
             // русскийToolStripMenuItem
             // 
             this.русскийToolStripMenuItem.Name = "русскийToolStripMenuItem";
-            this.русскийToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.русскийToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.русскийToolStripMenuItem.Text = "Русский";
             this.русскийToolStripMenuItem.Click += new System.EventHandler(this.русскийToolStripMenuItem_Click);
             // 

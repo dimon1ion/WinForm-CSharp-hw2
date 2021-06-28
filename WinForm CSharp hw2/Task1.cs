@@ -60,37 +60,37 @@ namespace WinForm_CSharp_hw2
         private void SetLocalization(string loc)
         {
             loc = loc.ToLower();
-            настройкиToolStripMenuItem.Text = task1.ResourceManager.GetString(loc + "_settings");
-            цветФормыToolStripMenuItem.Text = task1.ResourceManager.GetString(loc + "_colorform");
-            groupBox1.Text = task1.ResourceManager.GetString(loc + "_gasstation");
-            label1.Text = task1.ResourceManager.GetString(loc + "_oil");
-            label2.Text = task1.ResourceManager.GetString(loc + "_cost");
-            label3.Text = task1.ResourceManager.GetString(loc + "_rub");
-            radioButton1.Text = task1.ResourceManager.GetString(loc + "_num");
-            label4.Text = task1.ResourceManager.GetString(loc + "_litres");
-            radioButton2.Text = task1.ResourceManager.GetString(loc + "_amount");
-            label5.Text = task1.ResourceManager.GetString(loc + "_rub");
+            настройкиToolStripMenuItem.Text = lang.ResourceManager.GetString(loc + "_settings");
+            цветФормыToolStripMenuItem.Text = lang .ResourceManager.GetString(loc + "_colorform");
+            groupBox1.Text = lang.ResourceManager.GetString(loc + "_gasstation");
+            label1.Text = lang.ResourceManager.GetString(loc + "_oil");
+            label2.Text = lang.ResourceManager.GetString(loc + "_cost");
+            label3.Text = lang.ResourceManager.GetString(loc + "_rub");
+            radioButton1.Text = lang.ResourceManager.GetString(loc + "_num");
+            label4.Text = lang.ResourceManager.GetString(loc + "_litres");
+            radioButton2.Text = lang.ResourceManager.GetString(loc + "_amount");
+            label5.Text = lang.ResourceManager.GetString(loc + "_rub");
             if (radioButton1.Checked)
             {
-                groupBox3.Text = task1.ResourceManager.GetString(loc + "_topay");
+                groupBox3.Text = lang.ResourceManager.GetString(loc + "_topay");
             }
             else
             {
-                groupBox3.Text = task1.ResourceManager.GetString(loc + "_toissue");
+                groupBox3.Text = lang.ResourceManager.GetString(loc + "_toissue");
             }
-            rubSumOilLabel.Text = task1.ResourceManager.GetString(loc + "_rub");
-            groupBox4.Text = task1.ResourceManager.GetString(loc + "_cafe");
-            label8.Text = task1.ResourceManager.GetString(loc + "_cost");
-            label9.Text = task1.ResourceManager.GetString(loc + "_num");
-            Hot_DogCheckBox.Text = task1.ResourceManager.GetString(loc + "_hot_dog");
-            HamburgerCheckBox.Text = task1.ResourceManager.GetString(loc + "_hamburger");
-            PotatoCheckBox.Text = task1.ResourceManager.GetString(loc + "_potato");
-            CocaCheckBox.Text = task1.ResourceManager.GetString(loc + "_coca");
-            groupBox5.Text = task1.ResourceManager.GetString(loc + "_topay");
-            label10.Text = task1.ResourceManager.GetString(loc + "_rub");
-            groupBox6.Text = task1.ResourceManager.GetString(loc + "_totalpay");
-            label12.Text = task1.ResourceManager.GetString(loc + "_rub");
-            button1.Text = task1.ResourceManager.GetString(loc + "_calculate");
+            rubSumOilLabel.Text = lang.ResourceManager.GetString(loc + "_rub");
+            groupBox4.Text = lang.ResourceManager.GetString(loc + "_cafe");
+            label8.Text = lang.ResourceManager.GetString(loc + "_cost");
+            label9.Text = lang.ResourceManager.GetString(loc + "_num");
+            Hot_DogCheckBox.Text = lang.ResourceManager.GetString(loc + "_hot_dog");
+            HamburgerCheckBox.Text = lang.ResourceManager.GetString(loc + "_hamburger");
+            PotatoCheckBox.Text = lang.ResourceManager.GetString(loc + "_potato");
+            CocaCheckBox.Text = lang.ResourceManager.GetString(loc + "_coca");
+            groupBox5.Text = lang.ResourceManager.GetString(loc + "_topay");
+            label10.Text = lang.ResourceManager.GetString(loc + "_rub");
+            groupBox6.Text = lang.ResourceManager.GetString(loc + "_totalpay");
+            label12.Text = lang.ResourceManager.GetString(loc + "_rub");
+            button1.Text = lang.ResourceManager.GetString(loc + "_calculate");
         }
 
         private void Change_TimeStripStatus()
@@ -158,8 +158,8 @@ namespace WinForm_CSharp_hw2
             }
             if (radioButton1.Checked)
             {
-                groupBox3.Text = task1.ResourceManager.GetString(language + "_topay");
-                rubSumOilLabel.Text = task1.ResourceManager.GetString(language + "_rub");
+                groupBox3.Text = lang.ResourceManager.GetString(language + "_topay");
+                rubSumOilLabel.Text = lang.ResourceManager.GetString(language + "_rub");
                 if (CostOilTextBox.Text != String.Empty)
                 {
                     float liters;
@@ -183,8 +183,8 @@ namespace WinForm_CSharp_hw2
             }
             if (radioButton2.Checked)
             {
-                groupBox3.Text = task1.ResourceManager.GetString(language + "_toissue");
-                rubSumOilLabel.Text = task1.ResourceManager.GetString(language + "_litres");
+                groupBox3.Text = lang.ResourceManager.GetString(language + "_toissue");
+                rubSumOilLabel.Text = lang.ResourceManager.GetString(language + "_litres");
                 if (CostOilTextBox.Text != String.Empty)
                 {
                     float cost;
