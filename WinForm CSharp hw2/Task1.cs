@@ -20,6 +20,7 @@ namespace WinForm_CSharp_hw2
         public static int green;
         public static int red;
         public static int blue;
+        string language;
         int timeHour, timeMinute, timeDay, timeMonth, timeYear;
         public Task1()
         {
@@ -52,6 +53,44 @@ namespace WinForm_CSharp_hw2
             groupBox4.ForeColor = this.ForeColor;
             groupBox5.ForeColor = this.ForeColor;
             groupBox6.ForeColor = this.ForeColor;
+            language = "ru";
+            SetLocalization("RU");
+        }
+
+        private void SetLocalization(string loc)
+        {
+            loc = loc.ToLower();
+            настройкиToolStripMenuItem.Text = task1.ResourceManager.GetString(loc + "_settings");
+            цветФормыToolStripMenuItem.Text = task1.ResourceManager.GetString(loc + "_colorform");
+            groupBox1.Text = task1.ResourceManager.GetString(loc + "_gasstation");
+            label1.Text = task1.ResourceManager.GetString(loc + "_oil");
+            label2.Text = task1.ResourceManager.GetString(loc + "_cost");
+            label3.Text = task1.ResourceManager.GetString(loc + "_rub");
+            radioButton1.Text = task1.ResourceManager.GetString(loc + "_num");
+            label4.Text = task1.ResourceManager.GetString(loc + "_litres");
+            radioButton2.Text = task1.ResourceManager.GetString(loc + "_amount");
+            label5.Text = task1.ResourceManager.GetString(loc + "_rub");
+            if (radioButton1.Checked)
+            {
+                groupBox3.Text = task1.ResourceManager.GetString(loc + "_topay");
+            }
+            else
+            {
+                groupBox3.Text = task1.ResourceManager.GetString(loc + "_toissue");
+            }
+            rubSumOilLabel.Text = task1.ResourceManager.GetString(loc + "_rub");
+            groupBox4.Text = task1.ResourceManager.GetString(loc + "_cafe");
+            label8.Text = task1.ResourceManager.GetString(loc + "_cost");
+            label9.Text = task1.ResourceManager.GetString(loc + "_num");
+            Hot_DogCheckBox.Text = task1.ResourceManager.GetString(loc + "_hot_dog");
+            HamburgerCheckBox.Text = task1.ResourceManager.GetString(loc + "_hamburger");
+            PotatoCheckBox.Text = task1.ResourceManager.GetString(loc + "_potato");
+            CocaCheckBox.Text = task1.ResourceManager.GetString(loc + "_coca");
+            groupBox5.Text = task1.ResourceManager.GetString(loc + "_topay");
+            label10.Text = task1.ResourceManager.GetString(loc + "_rub");
+            groupBox6.Text = task1.ResourceManager.GetString(loc + "_totalpay");
+            label12.Text = task1.ResourceManager.GetString(loc + "_rub");
+            button1.Text = task1.ResourceManager.GetString(loc + "_calculate");
         }
 
         private void Change_TimeStripStatus()
@@ -119,8 +158,8 @@ namespace WinForm_CSharp_hw2
             }
             if (radioButton1.Checked)
             {
-                groupBox3.Text = "К оплате";
-                rubSumOilLabel.Text = "руб.";
+                groupBox3.Text = task1.ResourceManager.GetString(language + "_topay");
+                rubSumOilLabel.Text = task1.ResourceManager.GetString(language + "_rub");
                 if (CostOilTextBox.Text != String.Empty)
                 {
                     float liters;
@@ -144,8 +183,8 @@ namespace WinForm_CSharp_hw2
             }
             if (radioButton2.Checked)
             {
-                groupBox3.Text = "К выдаче";
-                rubSumOilLabel.Text = "л.";
+                groupBox3.Text = task1.ResourceManager.GetString(language + "_toissue");
+                rubSumOilLabel.Text = task1.ResourceManager.GetString(language + "_litres");
                 if (CostOilTextBox.Text != String.Empty)
                 {
                     float cost;
@@ -262,6 +301,18 @@ namespace WinForm_CSharp_hw2
             Show();
             WindowState = FormWindowState.Normal;
             notifyIcon1.Visible = false;
+        }
+
+        private void русскийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            language = "ru";
+            SetLocalization("RU");
+        }
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            language = "en";
+            SetLocalization("EN");
         }
 
         private void CocaCheckBox_CheckedChanged(object sender, EventArgs e)

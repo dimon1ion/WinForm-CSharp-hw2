@@ -54,11 +54,59 @@
     <Compile Include="Task1.Designer.cs">
       <DependentUpon>Task1.cs</DependentUpon>
     </Compile>
+    <Compile Include="task11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>task1.resx</DependentUpon>
+    </Compile>
     <Compile Include="Task1_1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Task1_1.Designer.cs">
       <DependentUpon>Task1_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task2.Designer.cs">
+      <DependentUpon>Task2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task2_Find.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task2_Find.Designer.cs">
+      <DependentUpon>Task2_Find.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task3\Task3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task3\Task3.Designer.cs">
+      <DependentUpon>Task3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task3\Device.cs" />
+    <Compile Include="Task3\Task3_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task3\Task3_Add.Designer.cs">
+      <DependentUpon>Task3_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task4.Designer.cs">
+      <DependentUpon>Task4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task4_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task4_Edit.Designer.cs">
+      <DependentUpon>Task4_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks.Designer.cs">
+      <DependentUpon>Tasks.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -69,11 +117,34 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Task1.resx">
+    <EmbeddedResource Include="task1.resx">
       <DependentUpon>Task1.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>task11.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Task1_1.resx">
       <DependentUpon>Task1_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task2.resx">
+      <DependentUpon>Task2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task2_Find.resx">
+      <DependentUpon>Task2_Find.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task3\Task3.resx">
+      <DependentUpon>Task3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task3\Task3_Add.resx">
+      <DependentUpon>Task3_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task4.resx">
+      <DependentUpon>Task4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task4_Edit.resx">
+      <DependentUpon>Task4_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks.resx">
+      <DependentUpon>Tasks.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -84,7 +155,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Task1.Designer.1" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

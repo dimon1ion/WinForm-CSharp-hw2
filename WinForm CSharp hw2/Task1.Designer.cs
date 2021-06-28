@@ -73,6 +73,9 @@ namespace WinForm_CSharp_hw2
             this.TimetoolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.dayOfWeakToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.русскийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.цветФормыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -218,7 +221,7 @@ namespace WinForm_CSharp_hw2
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(206, 79);
+            this.label3.Location = new System.Drawing.Point(218, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 4;
@@ -239,7 +242,7 @@ namespace WinForm_CSharp_hw2
             this.CostOilTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.CostOilTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CostOilTextBox.Enabled = false;
-            this.CostOilTextBox.Location = new System.Drawing.Point(79, 72);
+            this.CostOilTextBox.Location = new System.Drawing.Point(91, 72);
             this.CostOilTextBox.Name = "CostOilTextBox";
             this.CostOilTextBox.Size = new System.Drawing.Size(121, 20);
             this.CostOilTextBox.TabIndex = 2;
@@ -261,7 +264,7 @@ namespace WinForm_CSharp_hw2
             "АИ-98",
             "Diesel",
             "АИ-95"});
-            this.comboBox1.Location = new System.Drawing.Point(79, 33);
+            this.comboBox1.Location = new System.Drawing.Point(91, 33);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 0;
@@ -517,7 +520,8 @@ namespace WinForm_CSharp_hw2
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TimetoolStripStatusLabel,
-            this.toolStripDropDownButton1});
+            this.toolStripDropDownButton1,
+            this.toolStripDropDownButton2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 495);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(599, 22);
@@ -535,10 +539,9 @@ namespace WinForm_CSharp_hw2
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dayOfWeakToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 20);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(13, 20);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // dayOfWeakToolStripMenuItem
@@ -546,6 +549,31 @@ namespace WinForm_CSharp_hw2
             this.dayOfWeakToolStripMenuItem.Name = "dayOfWeakToolStripMenuItem";
             this.dayOfWeakToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.dayOfWeakToolStripMenuItem.Text = "DayOfWeak";
+            // 
+            // toolStripDropDownButton2
+            // 
+            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.englishToolStripMenuItem,
+            this.русскийToolStripMenuItem});
+            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(13, 20);
+            this.toolStripDropDownButton2.Text = "toolStripDropDownButton2";
+            // 
+            // englishToolStripMenuItem
+            // 
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.englishToolStripMenuItem.Text = "English";
+            this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
+            // 
+            // русскийToolStripMenuItem
+            // 
+            this.русскийToolStripMenuItem.Name = "русскийToolStripMenuItem";
+            this.русскийToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.русскийToolStripMenuItem.Text = "Русский";
+            this.русскийToolStripMenuItem.Click += new System.EventHandler(this.русскийToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -575,7 +603,7 @@ namespace WinForm_CSharp_hw2
             // notifyIcon1
             // 
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Text = "Gas station";
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // Task1
@@ -666,5 +694,8 @@ namespace WinForm_CSharp_hw2
         private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem цветФормыToolStripMenuItem;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
+        private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem русскийToolStripMenuItem;
     }
 }
