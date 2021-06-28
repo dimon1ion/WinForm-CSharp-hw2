@@ -11,6 +11,7 @@ namespace WinForm_CSharp_hw2
 {
     public partial class Task1 : Form
     {
+        Tasks tasks;
         float[] arrCostCafeFood;
         Timer timerEnd = new Timer();
         Timer timerTime = new Timer();
@@ -22,8 +23,9 @@ namespace WinForm_CSharp_hw2
         public static int blue;
         string language;
         int timeHour, timeMinute, timeDay, timeMonth, timeYear;
-        public Task1()
+        public Task1(Tasks _tasks)
         {
+            tasks = _tasks;
             InitializeComponent();
             arrCostCafeFood = new float[4];
             for (int i = 0; i < arrCostCafeFood.Length; i++)
@@ -398,7 +400,11 @@ namespace WinForm_CSharp_hw2
 
         private void Task8_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MessageBox.Show($"Общая сумма выручки: {TodayWork} рублей");
+            if (WindowState != FormWindowState.Minimized)
+            {
+                MessageBox.Show($"Общая сумма выручки: {TodayWork} рублей");
+                tasks.Show_Visible();
+            }
         }
     }
 }

@@ -21,12 +21,16 @@ namespace WinForm_CSharp_hw2
             InitializeComponent();
         }
 
+        public void Show_Visible()
+        {
+            this.Visible = true;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            task1 = new Task1();
+            task1 = new Task1(this);
             this.Visible = false;
             task1.ShowDialog();
-            this.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
