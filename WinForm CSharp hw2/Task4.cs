@@ -14,6 +14,7 @@ namespace WinForm_CSharp_hw2
     public partial class Task4 : Form
     {
         Task4_Edit task4_Edit;
+        public string Name { get; set; }
         public Task4()
         {
             InitializeComponent();
@@ -27,7 +28,9 @@ namespace WinForm_CSharp_hw2
             {
                 button2.Enabled = true;
                 StreamReader streamReader = File.OpenText(openFileDialog.FileName);
+                Name = openFileDialog.FileName;
                 textBox1.Text = streamReader.ReadToEnd();
+                streamReader.Close();
             }
         }
 
